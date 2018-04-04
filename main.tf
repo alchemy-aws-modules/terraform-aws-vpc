@@ -337,3 +337,7 @@ output "public_rtb_id" {
 output "private_nat_ips" {
   value = ["${aws_eip.nat.*.public_ip}"]
 }
+
+output "default_db_subnet_group" {
+  value = "${aws_db_subnet_group.default.id}"
+}
