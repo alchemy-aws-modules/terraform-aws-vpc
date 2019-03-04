@@ -74,6 +74,7 @@ variable "private_route_table_tags" {
 # This data source returns the newest Amazon NAT instance AMI
 data "aws_ami" "nat_ami" {
   most_recent = true
+  owners           = ["amazon"]
 
   filter {
     name   = "owner-alias"
